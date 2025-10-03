@@ -1,1 +1,72 @@
-/etc/xdg/waybar/config.jsonc
+{
+	"height": 40,
+	"spacing": 3,
+	"margin-top": 5,
+	"margin-left": 5,
+	"margin-right": 5,
+	"reload_style_on_change": true,
+	"modules-left": [
+		"hyprland/workspaces"
+	],
+	"modules-center": [
+		"hyprland/window"
+	],
+	"modules-right": [
+		"cpu",
+		"memory",
+		"custom/split",
+		"network",
+		"bluetooth",
+		"pulseaudio",
+		"custom/split",
+		"clock"
+	],
+	"hyprland/workspaces": {
+		"persistent-workspaces": {
+			"*": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
+		},
+	},
+	"hyprland/window": {
+		"rewrite": {
+			"(.*) — Mozilla Firefox": "Firefox"
+		}
+	},
+	"cpu": {
+		"format": "CPU:{usage}%"
+	},
+	"memory": {
+		"format": "RAM:{percentage}%"
+	},
+	"custom/split": {
+		"format": "•",
+		"tooltip": false
+	},
+	"clock": {
+		"format": "{:%D %I:%M %p}",
+		"tooltip-format": "<tt><small>{calendar}</small></tt>",
+		"calendar": {
+			"mode": "month",
+			"format": {
+				"weekdays": "<span color='#ce5c23'><b>{}</b></span>",
+				"months": "<span color='#fcbc8a'><b>{}</b></span>",
+				"today": "<span color='#bf3b13'><b><u>{}</u></b></span>"
+			}
+		}
+	},
+	"network": {
+		"format-wifi": "{icon}",
+		"format-ethernet": "LAN",
+		"format-disconnected": "󰖪",
+		"tooltip-format": "{ipaddr}\n{essid} ({signalStrength}%)",
+		"on-click": "kitty -e nmtui",
+		"format-icons": [ "󰤯", "󰤟", "󰤢", "󰤥", "󰤨" ]
+	},
+	"pulseaudio": {
+		"tooltip-format": "{desc}",
+		"on-click": "pavucontrol"
+	},
+	"bluetooth": {
+		"format": "",
+		"on-click": "kitty -e bluetui"
+	}
+}
