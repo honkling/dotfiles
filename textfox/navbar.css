@@ -71,7 +71,7 @@
     display: var(--tf-display-titles);
     content: "navbar";
     /* background-color: var(--tf-bg); */
-    color: rgb(160, 144, 122) !important;
+    color: rgb(160, 144, 122);
     position: absolute;
     margin: -16px 4px;
     padding: 0 2px;
@@ -101,6 +101,7 @@
   &::before {
     display: var(--tf-display-titles);
     content: "bookmarks";
+    color: rgb(160, 144, 122);
     background-color: #2E2C25;
     position: absolute;
     margin: -1.25rem .4rem;

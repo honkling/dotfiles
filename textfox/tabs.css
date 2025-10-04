@@ -12,6 +12,7 @@ box#vertical-tabs {
     display: var(--tf-display-titles);
     content: "tabs";
     background-color: var(--tf-bg);
+    color: rgb(160, 144, 122) !important;
     position: absolute;
     margin: -1.75rem .75rem;
     padding: 0 2px;
@@ -48,6 +49,7 @@ box#vertical-tabs {
     content: "tabs";
     /* background-color: var(--tf-bg); */
     background-color: #2E2C25;
+    color: rgb(160, 144, 122);
     position: absolute;
     margin: -.75rem .75rem;
     padding: 0 2px;
